@@ -1,0 +1,149 @@
+html {
+    height:100%;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%),url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+}
+
+h3 {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.container {
+    width: 100%;
+}
+
+nav {
+    font-size: 18px;
+	font-family: courier;
+    font-weight: bold;
+    opacity: 0.90;
+}
+
+a {
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+
+#logo-image img {
+    height: 20%;
+    width: 20%;
+}
+
+#search-bar-home {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.search-results {
+    border: solid;
+    border-width: 2px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.search-results a {
+    text-decoration: none;
+}
+
+
+.search-results:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%),url(../images/background.jpg) no-repeat center center fixed; 
+    border: solid;
+    border-width: 1px;
+}
+
+.search-results ul li {
+    color: white;
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.search-results ul li h1{
+    margin-bottom: 0px;
+    font-size: 50px;
+}
+
+.search-results ul li h3{
+    margin-top: 5px;
+}
+
+.search-results ul li ul{
+    padding-left: 0px;
+}
+
+label {
+    color:white;
+    font-size: 24px;
+}
+
+.tiles {
+  width: 50%;
+  height: 50%;
+}
+
+.tiles button
+{
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%),url(../images/logo.png); 
+width: 162px;
+height: 162px;
+color: white;
+margin: 30px 30px 30px 30px;
+box-shadow: 15px 15px 20px black;
+border-style: none;
+border-color: white;
+border-radius: 10px;
+}
+
+.tiles a {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tiles button:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),url(../images/logo.png); 
+    width: 163px;
+    height: 163px;
+}
+
+.nav-logo #logo-image img {
+    width: 5%;
+    padding-top: 0px;
+}
+
+.btn-primary {
+    width: 40%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.form-control {
+    height: 50px;
+    font-size: 18px;
+}
+
+.class-grade {
+    font-size: 14px;
+}
+
+.class-name {
+    font-size: 20px;
+}

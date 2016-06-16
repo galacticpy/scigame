@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block body %}
+<body id="results">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+<div class="container" id="search-bar" style="width:25%">
+    <form action="{{ url_for('results') }}" method=post>
+      <fieldset class="form-group">
+        <center><label for="search-students">Search Students</label></center>
+        <input type="text" class="form-control" name="search-students" id="search-students" placeholder="Students Name" required>
+      </fieldset>
+      <center><button type="submit" class="btn btn-primary">Search</button></center>
+    </form>
+</div>
+<div class="query-count">
+<center><h3>Search for "{{ query }}" returned ({{ count }}) result{% if count != '1' %}s{% endif %}</center></h3>
+</div>
+{% if noresults %}
+<center>
+<div class="no-results">
+<h1>Sorry No Results!</h1>
+</div>
+</center>
+{% else %}
+
+{% for student in students['students'] %}
+
+<div class="search-results">
+    <ul>
+        <a class="show-info" href="#">
+            <li><h1>{{ student['first'] }} {{ student['last'] }}</h1></li>
+                {% set gpa = [] %}
+                {% for grade in student['studentClasses'] %}
+                    {% if gpa.append(grade['grade']) %}{% endif %}
+                {% endfor %}
+            <li><h3>GPA: {{ (gpa | sum / gpa | count)|round(1, 'common') }}</h3></li>
+        </a>
+
+        <div class="additional-information" style="display:none">
+        <li><h4><a href="mailto:{{ student['email'] }}">{{ student['email'] }}</a></h4></li> 
+     
+            <div class="tiles">
+            {% for classes in student['studentClasses'] %}
+              <button type="button"><p class="class-name">{{ classes['id'] }}</p> <p class="class-grade">Grade: {{ classes['grade'] }}</p></button></a>
+            {% endfor %}
+            </div>
+        </div> 
+    </ul>
+
+</div>
+
+{% endfor %}
+
+<script>
+	$(".show-info").click(function() {
+    	$(this).nextAll(".additional-information").toggle();
+});
+</script>
+
+
+</script>
+{% endif %}
+</body>
+{% endblock %}

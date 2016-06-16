@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% block body %}
+<body id="home">
+
+    <center><span class="container" id="logo-image"><a href="/"><img src="http://www.scientificgames.com/img/SG_logoLG.png"></a></span></center>
+    <div class="container" id="search-bar-home" style="width:25%">
+        <form action="{{ url_for('results') }}" method=post>
+          <fieldset class="form-group">
+            <center><label for="search-students">Search Students</label></center>
+            <input type="text" class="form-control" name="search-students" id="search-students" placeholder="Students Name" required>
+          </fieldset>
+          <center><button type="submit" class="btn btn-primary">Search</button></center>
+        </form>
+    </div>
+
+</body>
+
+{% endblock %}
