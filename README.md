@@ -5,6 +5,7 @@
 pip install Flask
 
 #Run
-Python scigame.py
+python scigame.py
 
-#Application runs on http://localhost:5000
+#Application runs on 
+http://localhost:5000
