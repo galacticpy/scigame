@@ -2,6 +2,9 @@
 #06/16/2016
 
 #Required Packages
-#pip install Flask
+pip install Flask
+
+#Run
+Python scigame.py
 
 #Application runs on http://localhost:5000
