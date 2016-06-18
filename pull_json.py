@@ -17,7 +17,7 @@ with open(json_file) as data_file:
             last = name
 
         #Match Exact
-        match['students'] = [student for student in json_data['students'] if first.lower() in student['first'].lower() and last.lower() in student['last'].lower() if student['email'] not in match]
+        match['students'] = [student for student in json_data['students'] if first.lower() in student['first'].lower() and last.lower() in student['last'].lower()]
         
         #Match Partial        
         if not match['students']:            
